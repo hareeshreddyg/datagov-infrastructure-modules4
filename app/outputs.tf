@@ -6,7 +6,7 @@ output "harvester_sg_id" {
   value = "${aws_security_group.harvester-sg.id}"
 }
 
-output "solr_server" {
+output "solr_sg.id" {
   value = "${aws_security_group.solr-sg.id}"
 }
 
