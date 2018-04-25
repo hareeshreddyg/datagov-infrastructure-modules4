@@ -7,5 +7,5 @@ variable "vpc_name" {
 }
 
 variable "env" {
-  default = "dev"
+  default = "test"
 }

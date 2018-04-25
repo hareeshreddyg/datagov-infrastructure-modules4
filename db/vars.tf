@@ -1,5 +1,5 @@
 variable "env" {
-  default = "dev"
+  default = "test"
 }
 
 variable "aws_region" {
@@ -23,7 +23,7 @@ variable "db_engine_version" {
 }
 
 variable "db_instance_class" {
-  default = "db.t2.micro"
+  default = "db.t2.xlarge"
 }
 
 variable "db_name" {
