@@ -32,6 +32,7 @@ resource "aws_launch_configuration" "web_lc" {
   user_data                   = "${data.template_file.web_user_data.rendered}" 
 
   lifecycle {
+    ignore_changes = ["ami"]
     create_before_destroy = true
   }
 
@@ -71,6 +72,7 @@ resource "aws_launch_configuration" "harvester_lc" {
 
 
   lifecycle {
+    ignore_changes = ["ami"]
     create_before_destroy = true
   }
 }
@@ -104,6 +106,7 @@ resource "aws_launch_configuration" "solr_lc" {
   user_data                   = "${data.template_file.solr_user_data.rendered}" 
 
   lifecycle {
+    ignore_changes = ["ami"]
     create_before_destroy = true
   }
 }
@@ -134,6 +137,7 @@ resource "aws_launch_configuration" "inventory_lc" {
   security_groups             = [ "${aws_security_group.inventory-sg.id}", "${aws_security_group.ssh-sg.id}" ]
 
   lifecycle {
+    ignore_changes = ["ami"]
     create_before_destroy = true
   }
 }
@@ -164,6 +168,7 @@ resource "aws_launch_configuration" "crm_lc" {
   security_groups             = [ "${aws_security_group.crm-sg.id}", "${aws_security_group.ssh-sg.id}" ]
 
   lifecycle {
+    ignore_changes = ["ami"]
     create_before_destroy = true
   }
 }
@@ -194,6 +199,7 @@ resource "aws_launch_configuration" "dashboard_lc" {
   security_groups             = [ "${aws_security_group.dashboard-sg.id}", "${aws_security_group.ssh-sg.id}" ]
 
   lifecycle {
+    ignore_changes = ["ami"]
     create_before_destroy = true
   }
 }
@@ -223,6 +229,7 @@ resource "aws_launch_configuration" "wordpress_lc" {
   security_groups             = [ "${aws_security_group.wordpress-sg.id}", "${aws_security_group.ssh-sg.id}" ]
 
   lifecycle {
+    ignore_changes = ["ami"]
     create_before_destroy = true
   }
 }
@@ -253,6 +260,7 @@ resource "aws_launch_configuration" "static_lc" {
   security_groups             = [ "${aws_security_group.static-sg.id}", "${aws_security_group.ssh-sg.id}" ]
 
   lifecycle {
+    ignore_changes = ["ami"]
     create_before_destroy = true
   }
 }
