@@ -203,7 +203,7 @@ resource "aws_alb_target_group" "wordpress_tg" {
 resource "aws_alb" "static_alb" {
   name            = "static-alb-test-tf"
   internal        = true
-  security_groups = ["${aws_security_group.static-solr-sg.id}"]
+  security_groups = ["${aws_security_group.solr-sg.id}"]
   subnets         = ["${data.terraform_remote_state.vpc.public_subnets}"]
 }
 
