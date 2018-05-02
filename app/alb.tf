@@ -64,7 +64,7 @@ resource "aws_alb_target_group" "solr_tg" {
 resource "aws_alb" "harvester_alb" {
   name            = "harvester-alb-test-tf"
   internal        = true
-  security_groups = ["${aws_security_group.harvester-alb-sg.id}"]
+  security_groups = ["${aws_security_group.solr-alb-sg.id}"]
   subnets         = ["${data.terraform_remote_state.vpc.public_subnets}"]
 }
 
@@ -92,7 +92,7 @@ resource "aws_alb_target_group" "harvester_tg" {
 resource "aws_alb" "inventory_alb" {
   name            = "inventory-alb-test-tf"
   internal        = true
-  security_groups = ["${aws_security_group.inventory-alb-sg.id}"]
+  security_groups = ["${aws_security_group.solr-alb-sg.id}"]
   subnets         = ["${data.terraform_remote_state.vpc.public_subnets}"]
 }
 
@@ -120,7 +120,7 @@ resource "aws_alb_target_group" "inventory_tg" {
 resource "aws_alb" "crm_alb" {
   name            = "crm-alb-test-tf"
   internal        = true
-  security_groups = ["${aws_security_group.crm-alb-sg.id}"]
+  security_groups = ["${aws_security_group.solr-alb-sg.id}"]
   subnets         = ["${data.terraform_remote_state.vpc.public_subnets}"]
 }
 
@@ -148,7 +148,7 @@ resource "aws_alb_target_group" "crm_tg" {
 resource "aws_alb" "dashboard_alb" {
   name            = "dashboard-alb-test-tf"
   internal        = true
-  security_groups = ["${aws_security_group.dashboard-alb-sg.id}"]
+  security_groups = ["${aws_security_group.solr-alb-sg.id}"]
   subnets         = ["${data.terraform_remote_state.vpc.public_subnets}"]
 }
 
@@ -175,7 +175,7 @@ resource "aws_alb_target_group" "dashboard_tg" {
 resource "aws_alb" "wordpress_alb" {
   name            = "wordpress-alb-test-tf"
   internal        = true
-  security_groups = ["${aws_security_group.wordpress-alb-sg.id}"]
+  security_groups = ["${aws_security_group.solr-alb-sg.id}"]
   subnets         = ["${data.terraform_remote_state.vpc.public_subnets}"]
 }
 
@@ -203,7 +203,7 @@ resource "aws_alb_target_group" "wordpress_tg" {
 resource "aws_alb" "static_alb" {
   name            = "static-alb-test-tf"
   internal        = true
-  security_groups = ["${aws_security_group.static-alb-sg.id}"]
+  security_groups = ["${aws_security_group.static-solr-sg.id}"]
   subnets         = ["${data.terraform_remote_state.vpc.public_subnets}"]
 }
 
