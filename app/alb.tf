@@ -82,7 +82,7 @@ resource "aws_alb_listener" "harvester_alb_Listener" {
 
 # harvester alb target groups #
 resource "aws_alb_target_group" "harvester_tg" {
-  name_prefix     = "harvester-"
+  name_prefix     = "harv-"
   port            = 8080
   protocol        = "HTTP"
   vpc_id          = "${data.terraform_remote_state.vpc.vpc_id}"
@@ -110,7 +110,7 @@ resource "aws_alb_listener" "inventory_alb_Listener" {
 
 # inventory alb target groups #
 resource "aws_alb_target_group" "inventory_tg" {
-  name_prefix     = "inventory-"
+  name_prefix     = "inve-"
   port            = 8080
   protocol        = "HTTP"
   vpc_id          = "${data.terraform_remote_state.vpc.vpc_id}"
@@ -166,7 +166,7 @@ resource "aws_alb_listener" "dashboard_alb_Listener" {
 
 # dashboard alb target groups #
 resource "aws_alb_target_group" "dashboard_tg" {
-  name_prefix     = "dashboard-"
+  name_prefix     = "dash-"
   port            = 8080
   protocol        = "HTTP"
   vpc_id          = "${data.terraform_remote_state.vpc.vpc_id}"
@@ -193,7 +193,7 @@ resource "aws_alb_listener" "wordpress_alb_Listener" {
 
 # wordpress alb target groups #
 resource "aws_alb_target_group" "wordpress_tg" {
-  name_prefix     = "wordpress-"
+  name_prefix     = "word-"
   port            = 8080
   protocol        = "HTTP"
   vpc_id          = "${data.terraform_remote_state.vpc.vpc_id}"
@@ -221,7 +221,7 @@ resource "aws_alb_listener" "static_alb_Listener" {
 
 # static alb target groups #
 resource "aws_alb_target_group" "static_tg" {
-  name_prefix     = "static-"
+  name_prefix     = "stat-"
   port            = 8080
   protocol        = "HTTP"
   vpc_id          = "${data.terraform_remote_state.vpc.vpc_id}"
