@@ -78,7 +78,7 @@ variable "mysql_db_instance_class" {
 }
 
 variable "mysql_db_name" {
-  default = "wordpress-test"
+  default = "wordpresstest"
 }
 
 variable "mysql_db_username" {
