@@ -70,7 +70,7 @@ variable "mysql_db_engine" {
 }
 
 variable "mysql_db_engine_version" {
- default = "MySQL 5.6.27"
+ default = "MySQL5.6.27"
 }
 
 variable "mysql_db_instance_class" {
