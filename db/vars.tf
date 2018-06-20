@@ -58,11 +58,11 @@ variable "db_multi_az" {
 
 
 variable "mysql_db_allocated_storage" {
-  default = "10"
+  default = "20"
 }
 
 variable "mysql_db_storage_type" {
-  default = "gp2"
+  default = "SSD"
 }
 
 variable "mysql_db_engine" {
