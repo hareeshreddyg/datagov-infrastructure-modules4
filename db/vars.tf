@@ -82,11 +82,11 @@ variable "mysql_db_name" {
 }
 
 variable "mysql_db_username" {
-  default = "mysql"
+  default = "wordpressphp"
 }
 
 variable "mysql_db_password" {
-  default = "mysqlmysql"
+  default = "wordpressfortest"
 }
 
 variable "mysql_db_subnet_group_name" {
