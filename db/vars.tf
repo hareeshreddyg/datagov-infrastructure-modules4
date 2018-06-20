@@ -94,7 +94,7 @@ variable "mysql_db_subnet_group_name" {
 }
 
 variable "mysql_db_parameter_group_name" {
-  default = "default.mysql5.6.39"
+  default = "default.mysql5.6"
 }
 
 variable "mysql_db_skip_final_snapshot" {
