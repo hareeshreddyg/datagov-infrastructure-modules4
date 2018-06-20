@@ -62,19 +62,19 @@ variable "mysql_db_allocated_storage" {
 }
 
 variable "mysql_db_storage_type" {
-  default = "SSD"
+  default = "gp2"
 }
 
 variable "mysql_db_engine" {
-  default = "MySQL"
+  default = "mysql"
 }
 
 variable "mysql_db_engine_version" {
- default = "5.6.27"
+ default = "5.6.39"
 }
 
 variable "mysql_db_instance_class" {
-  default = "db.t2.xlarge"
+  default = "db.t2.large"
 }
 
 variable "mysql_db_name" {
@@ -94,7 +94,7 @@ variable "mysql_db_subnet_group_name" {
 }
 
 variable "mysql_db_parameter_group_name" {
-  default = "default.MySQL5.6.27"
+  default = "default.mysql5.6.39"
 }
 
 variable "mysql_db_skip_final_snapshot" {
